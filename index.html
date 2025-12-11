@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -12,132 +13,181 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a0a;
-            min-height: 100vh;
-            color: #fff;
-        }
+```
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: url('https://vitrine-show.github.io/foguenta-/fundo.png') center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        color: #fff;
+    }
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #000;
-        }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        .header {
-            background: #000;
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 1px solid #1a1a1a;
-        }
+    .header {
+        text-align: center;
+        padding: 30px 20px;
+    }
 
-        .logo {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 8px;
-        }
+    .logo {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 
-        .content {
-            padding: 40px 20px;
-        }
+    .content {
+        padding: 20px;
+    }
 
-        .produto-imagem {
-            width: 100%;
-            max-width: 350px;
-            height: 450px;
-            margin: 0 auto 30px;
-            display: block;
-            border: 1px solid #1a1a1a;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-            object-fit: cover;
-        }
+    .produto-card {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+    }
 
-        .produto-imagem:hover {
-            transform: translateY(-3px);
-        }
+    .produto-imagem {
+        width: 100%;
+        max-width: 280px;
+        height: 320px;
+        margin: 0 auto 30px;
+        display: block;
+        border-radius: 12px;
+        object-fit: cover;
+    }
 
-        .produto-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .produto-titulo {
+        font-size: 22px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
 
+    .produto-subtitulo {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .produto-descricao {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-whatsapp-preco {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px 30px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    .preco-container {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+    }
+
+    .preco-rs {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .preco-valor {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .btn-whatsapp-texto {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 30px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
+    .btn-whatsapp-preco:hover,
+    .btn:hover {
+        background: rgba(0, 0, 0, 0.85);
+        border-color: #ff0000;
+    }
+
+    .btn i {
+        font-size: 20px;
+    }
+
+    @media (max-width: 600px) {
         .produto-titulo {
-            font-size: 28px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .produto-preco {
-            font-size: 42px;
-            font-weight: 700;
-            color: #ff0000;
-            margin-bottom: 40px;
-        }
-
-        .botoes {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px 30px;
-            border: 1px solid #2a2a2a;
-            background: #0f0f0f;
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .btn:hover {
-            background: #1a1a1a;
-            border-color: #ff0000;
-            transform: translateY(-2px);
-        }
-
-        .btn i {
             font-size: 20px;
         }
 
-        @media (max-width: 600px) {
-            .produto-titulo {
-                font-size: 24px;
-            }
-
-            .produto-preco {
-                font-size: 36px;
-            }
-
-            .btn {
-                font-size: 15px;
-                padding: 14px 25px;
-            }
-
-            .logo {
-                max-width: 100%;
-            }
-
-            .produto-imagem {
-                max-width: 300px;
-                height: 400px;
-            }
+        .produto-subtitulo {
+            font-size: 15px;
         }
-    </style>
+
+        .produto-descricao {
+            font-size: 13px;
+        }
+
+        .preco-rs {
+            font-size: 18px;
+        }
+
+        .preco-valor {
+            font-size: 42px;
+        }
+
+        .btn {
+            font-size: 15px;
+            padding: 15px 25px;
+        }
+
+        .produto-imagem {
+            max-width: 240px;
+            height: 280px;
+        }
+
+        .logo {
+            max-width: 220px;
+        }
+    }
+</style>
+```
+
 </head>
 <body>
     <div class="container">
@@ -145,31 +195,42 @@
             <img src="https://vitrine-show.github.io/foguenta-/topo.png" alt="Foguenta Brasil" class="logo">
         </div>
 
-        <div class="content">
+```
+    <div class="content">
+        <div class="produto-card">
             <img src="https://vitrine-show.github.io/foguenta-/pimenta.png" alt="Pimenta Biquinho" class="produto-imagem">
 
-            <div class="produto-info">
-                <h1 class="produto-titulo">Pimenta Biquinho para seu restaurante</h1>
-                <div class="produto-preco">R$ 66,00</div>
-            </div>
+            <h1 class="produto-titulo">Pimenta Biquinho - Foguenta</h1>
+            <p class="produto-subtitulo">Qualidade para seu restaurante.</p>
+            
+            <p class="produto-descricao">
+                Produto selecionado para uso culinário profissional.<br>
+                Perfeita para temperos, conservas e finalização de pratos.
+            </p>
 
             <div class="botoes">
-                <a href="https://wa.me/5531982299400?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pimenta%20Biquinho" class="btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    WhatsApp
+                <a href="https://wa.me/5531982299400?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pimenta%20Biquinho" class="btn-whatsapp-preco" target="_blank">
+                    <div class="preco-container">
+                        <span class="preco-rs">R$</span>
+                        <span class="preco-valor">66,00</span>
+                    </div>
+                    <span class="btn-whatsapp-texto">Peça pelo WhatsApp</span>
                 </a>
 
                 <a href="https://www.instagram.com/foguentabrasil" class="btn" target="_blank">
                     <i class="fab fa-instagram"></i>
-                    Instagram
+                    <span>Instagram</span>
                 </a>
 
                 <a href="https://www.google.com/maps/search/?api=1&query=Rua+Cananéia,+535+-+Caicara-Adelaide+-+Belo+Horizonte+-+MG" class="btn" target="_blank">
                     <i class="fas fa-map-marker-alt"></i>
-                    Google Maps
+                    <span>Google Maps</span>
                 </a>
             </div>
         </div>
     </div>
+</div>
+```
+
 </body>
 </html>
